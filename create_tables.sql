@@ -1,13 +1,13 @@
 -- drop existing tables. Danger: dataloss if skript run after tables are filled
---DROP TABLE IF EXISTS trade;
---DROP TABLE IF EXISTS allowed_fi;
---DROP TABLE IF EXISTS `option`;
---DROP TABLE IF EXISTS stock;
---DROP TABLE IF EXISTS financial_instrument;
---DROP TABLE IF EXISTS counterparty;
---DROP TABLE IF EXISTS trader;
---DROP TABLE IF EXISTS option_style;
---DROP TABLE IF EXISTS fi_type;
+-- DROP TABLE IF EXISTS trade;
+-- DROP TABLE IF EXISTS allowed_fi;
+-- DROP TABLE IF EXISTS `option`;
+-- DROP TABLE IF EXISTS stock;
+-- DROP TABLE IF EXISTS financial_instrument;
+-- DROP TABLE IF EXISTS counterparty;
+-- DROP TABLE IF EXISTS trader;
+-- DROP TABLE IF EXISTS option_style;
+-- DROP TABLE IF EXISTS fi_type;
 
 
 -- Set encoding to allow special characters in nicknames and other freetext fields
@@ -65,13 +65,6 @@ CREATE TABLE `option` (
 	strike_price DECIMAL(16,4) NOT NULL,
 	maturity TIMESTAMP NOT NULL,
     PRIMARY KEY (fi_id)
-);
-
-CREATE TABLE allowed_fi (
-	emp_id CHAR(8),
-	stock_fi_id CHAR(36),
-	type_code INT,
-	PRIMARY KEY (emp_id, stock_fi_id, type_code)
 );
 
 CREATE TABLE trade (

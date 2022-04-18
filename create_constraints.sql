@@ -11,13 +11,6 @@ ADD FOREIGN KEY (underlying_stock) REFERENCES stock(fi_id);
 ALTER TABLE `option`
 ADD FOREIGN KEY (style_code) REFERENCES option_style(option_style_code);
 
-ALTER TABLE allowed_fi
-ADD FOREIGN KEY (emp_id) REFERENCES trader(emp_id);
-ALTER TABLE allowed_fi
-ADD FOREIGN KEY (stock_fi_id) REFERENCES stock(fi_id);
-ALTER TABLE allowed_fi
-ADD FOREIGN KEY (type_code) REFERENCES fi_type(fi_type_code);
-
 ALTER TABLE trade
 ADD FOREIGN KEY (emp_id) REFERENCES trader(emp_id);
 ALTER TABLE trade
